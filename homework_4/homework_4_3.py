@@ -1,5 +1,6 @@
 import random
 
+# Creating a random list with amount of elements from 3 to 10 & values from 1 to 100
 random_list = [random.randint(1, 100) for i in range(random.randint(3, 10))]
 
 print("A random list:")
