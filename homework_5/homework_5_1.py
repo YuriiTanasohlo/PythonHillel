@@ -12,8 +12,8 @@ if var_name[0].isdigit():
 # Whether the variable name contains space
 elif var_name.find(' ') != -1:
     result = False
-# Whether the variable name contains more than one char '_' (requirement for the HW)
-elif var_name.count('_') > 1:
+# Whether the variable name contains more than one char '_' in a row
+elif var_name.find('__') != -1:
     result = False
 # Whether the variable name contains only lowercase chars
 elif not var_name.islower():
