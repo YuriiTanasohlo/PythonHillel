@@ -15,8 +15,8 @@ elif var_name.find(' ') != -1:
 # Whether the variable name contains more than one char '_' in a row
 elif var_name.find('__') != -1:
     result = False
-# Whether the variable name contains only lowercase chars
-elif not var_name.islower():
+# Whether the variable name contains only lowercase chars, if the variable name is not '_'
+elif not var_name.islower() and var_name != "_":
     result = False
 # Whether the variable name contains any punctuation char except '_'
 for char in string.punctuation:
