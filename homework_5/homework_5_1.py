@@ -26,10 +26,7 @@ for char in string.punctuation:
         result = False
         break
 # Whether the variable name is the reserved python words
-for word in keyword.kwlist:
-    if var_name == word:
-        result = False
-        print("6")
-        break
+if result and var_name in keyword.kwlist:
+    result = False
 
 print(result)
