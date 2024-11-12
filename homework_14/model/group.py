@@ -4,9 +4,20 @@ from homework_14.exceptions.group_exception import OverloadedGroupException
 
 
 class Group:
+    __number: str
+    __group: set
+
     def __init__(self, number: str):
         self.__number = number
         self.__group = set()
+
+    @property
+    def number(self):
+        return self.__number
+
+    @number.setter
+    def number(self, number):
+        self.__number = number
 
     def add_student(self, student: Student):
         if len(self.__group) > 10:
@@ -14,15 +25,17 @@ class Group:
         else:
             self.__group.add(student)
 
-    def find_student(self, last_name: str):
-        return next((student for student in self.__group if student.get_last_name() == last_name), None)
+    def find_student(self, record_book_number: str):
+        return next((student for student in self.__group if student.record_book_number == record_book_number), None)
 
-    def delete_student(self, last_name: str):
-        student = self.find_student(last_name)
+    def remove_student(self, record_book_number: str):
+        student = self.find_student(record_book_number)
         if student is not None:
-            self.__group.remove(self.find_student(last_name))
+            self.__group.remove(student)
 
-    # added a service method that was not in the task
+    def get_all_students(self):
+        return self.__group
+
     def length(self):
         return len(self.__group)
 

@@ -8,3 +8,12 @@ class Student(Person):
 
     def __str__(self):
         return super().__str__() + f", record_book_number = {self.__record_book_number}"
+
+
+    @property
+    def record_book_number(self):
+        return self.__record_book_number
+
+    @record_book_number.setter
+    def record_book_number(self, record_book_number: str):
+        self.__record_book_number = record_book_number
