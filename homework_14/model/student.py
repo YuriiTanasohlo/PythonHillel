@@ -1,4 +1,4 @@
-from homework_13.model.person import Person
+from homework_14.model.person import Person
 
 
 class Student(Person):

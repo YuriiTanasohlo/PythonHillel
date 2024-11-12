@@ -1,6 +1,6 @@
-from homework_13.model.student import Student
+from homework_14.model.student import Student
 
-from homework_13.exceptions.group_exception import OverloadedGroupException
+from homework_14.exceptions.group_exception import OverloadedGroupException
 
 
 class Group:

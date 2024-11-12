@@ -1,10 +1,10 @@
 import traceback
 import copy
 
-from homework_13.model.student import Student
-from homework_13.model.group import Group
+from homework_14.model.student import Student
+from homework_14.model.group import Group
 
-from homework_13.exceptions.group_exception import OverloadedGroupException
+from homework_14.exceptions.group_exception import OverloadedGroupException
 
 group_1 = Group("1")
 vasyl = Student("Vasyl", "Vasylenko", Student.Gender.MALE, 23, "23234")
