@@ -1,6 +1,6 @@
 from homework_14.controller.student_controller import StudentController
 
-from homework_14.repository.date_base import DateBase
+from homework_14.repository.data_base import DataBase
 
 from homework_14.model.group import Group
 
@@ -9,10 +9,10 @@ import homework_14.view.group as group_view
 
 class GroupController:
 
-    __group_repository: "DateBase"
+    __group_repository: "DataBase"
     __student_controller: "StudentController"
 
-    def __init__(self, group_repository: "DateBase", student_controller: "StudentController"):
+    def __init__(self, group_repository: "DataBase", student_controller: "StudentController"):
         self.__group_repository = group_repository
         self.__student_controller = student_controller
 
@@ -29,6 +29,8 @@ class GroupController:
                 self.show_group(group_view.show_enter_group_page())
             case 3:
                 self.process_init_input(self.show_list_group())
+            case 4:
+                return
 
     def create_group(self, number: str):
         group = Group(number)

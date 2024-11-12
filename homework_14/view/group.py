@@ -9,6 +9,7 @@ def show_init_page():
     print("Please enter 1 to create a group")
     print("Please enter 2 to choose existing group")
     print("Please enter 3 to list all the existing groups")
+    print("Please enter 4 to exit the app")
 
     return int(input())
 

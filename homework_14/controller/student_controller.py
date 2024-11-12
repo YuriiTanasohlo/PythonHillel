@@ -1,6 +1,6 @@
 # from homework_14.controller.group_controller import GroupController
 
-from homework_14.repository.date_base import DateBase
+from homework_14.repository.data_base import DataBase
 
 from homework_14.model.group import Group
 from homework_14.model.student import Student
@@ -9,9 +9,9 @@ import homework_14.view.student as student_view
 
 
 class StudentController:
-    __date_base: DateBase
+    __date_base: DataBase
 
-    def __init__(self, date_base: DateBase):
+    def __init__(self, date_base: DataBase):
         self.__date_base = date_base
 
     def show_init(self, group: Group):
