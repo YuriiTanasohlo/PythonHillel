@@ -1,15 +1,20 @@
-from homework_15.rectangle import Rectangle
+from homework_15.fraction import Fraction
 
 if __name__ == "__main__":
-    r1 = Rectangle(2, 4)
-    r2 = Rectangle(3, 6)
-    assert r1.get_square() == 8, 'Test1'
-    assert r2.get_square() == 18, 'Test2'
+    f_a = Fraction(2, 3)
+    f_b = Fraction(3, 6)
+    f_c = f_b + f_a
+    assert str(f_c) == 'Fraction: 21, 18'
+    f_d = f_b * f_a
+    assert str(f_d) == 'Fraction: 6, 18'
+    f_e = f_a - f_b
+    assert str(f_e) == 'Fraction: 3, 18'
 
-    r3 = r1 + r2
-    assert r3.get_square() == 26, 'Test3'
+    assert f_d < f_c  # True
+    assert f_d > f_e  # True
+    assert f_a != f_b  # True
+    f_1 = Fraction(2, 4)
+    f_2 = Fraction(3, 6)
+    assert f_1 == f_2  # True
 
-    r4 = r1 * 4
-    assert r4.get_square() == 32, 'Test4'
-
-    assert Rectangle(3, 6) == Rectangle(2, 9), 'Test5'
+    print('OK')
